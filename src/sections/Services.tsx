@@ -1,23 +1,23 @@
 const services = [
   {
-    title: 'Trilha AWS',
+    title: 'Mentoria AWS',
     description:
       'Arquitetura, boas práticas, segurança, resiliência, desenho de soluções e preparação para conversas técnicas.',
   },
   {
-    title: 'Trilha FinOps',
+    title: 'Mentoria FinOps',
     description:
       'Custos cloud, desperdícios, governança, previsibilidade e como transformar economia em argumento de negócio.',
   },
   {
-    title: 'Trilha IA aplicada',
+    title: 'Mentoria em IA aplicada',
     description:
       'Casos de uso reais, automações, GenAI, produtividade e como sair do hype para aplicação prática.',
   },
   {
-    title: 'Consultoria pontual',
+    title: 'Projetos pontuais',
     description:
-      'Diagnóstico para empresas e times que precisam revisar arquitetura, custos cloud ou oportunidades com IA.',
+      'Consultoria sob demanda para revisar arquitetura, otimizar custos cloud, automatizar processos ou validar oportunidades com IA.',
   },
 ];
 
@@ -25,11 +25,12 @@ export function Services() {
   return (
     <section className="section" id="servicos">
       <div className="section-heading">
-        <p className="section-label">Trilhas e consultoria</p>
-        <h2>Mentoria como produto principal, consultoria como consequência natural.</h2>
+        <p className="section-label">Mentoria, consultoria e frelas</p>
+        <h2>Você pode me chamar para evoluir sua carreira ou resolver uma demanda técnica.</h2>
         <p>
-          Você pode começar pela mentoria individual ou trazer um problema real
-          da empresa para uma conversa de diagnóstico.
+          A mentoria é a porta principal. Mas também atuo em projetos pontuais,
+          diagnósticos técnicos e consultorias sob demanda para empresas, times
+          e profissionais independentes.
         </p>
       </div>
       <div className="service-grid">
