@@ -42,10 +42,16 @@ export function Header({ lang }: HeaderProps) {
         ))}
         <div className="language-switch" aria-label="Selecionar idioma">
           <a className={lang === 'pt' ? 'is-active' : ''} href="/">
-            <span className="flag flag-br" aria-hidden="true" /> PT
+            <span className="flag-emoji" aria-hidden="true">
+              {'\uD83C\uDDE7\uD83C\uDDF7'}
+            </span>
+            PT
           </a>
           <a className={lang === 'en' ? 'is-active' : ''} href="/en">
-            <span className="flag flag-us" aria-hidden="true" /> EN
+            <span className="flag-emoji" aria-hidden="true">
+              {'\uD83C\uDDFA\uD83C\uDDF8'}
+            </span>
+            EN
           </a>
         </div>
       </nav>
