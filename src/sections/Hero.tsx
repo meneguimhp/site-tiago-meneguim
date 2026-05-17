@@ -34,11 +34,13 @@ export function Hero() {
           ))}
         </div>
       </div>
-      <div className="hero-visual hero-visual--profile" aria-label="Foto profissional de Tiago Meneguim">
+      <div className="hero-visual hero-visual--profile">
         <div className="profile-card">
-          <div className="profile-card__avatar" aria-hidden="true">
-            TM
-          </div>
+          <img
+            className="profile-card__photo"
+            src="/tiago-meneguim.jpg"
+            alt="Tiago Meneguim"
+          />
           <p className="profile-card__role">Consultoria e mentoria</p>
           <h2>Cloud cost, arquitetura AWS e IA aplicada</h2>
           <p>
