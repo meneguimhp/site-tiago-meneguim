@@ -19,6 +19,40 @@ const labels = {
   },
 };
 
+function BrazilFlag() {
+  return (
+    <svg className="flag-icon" viewBox="0 0 24 16" aria-hidden="true">
+      <rect width="24" height="16" rx="2" fill="#229E45" />
+      <path d="M12 2.2 21 8l-9 5.8L3 8z" fill="#F8D43A" />
+      <circle cx="12" cy="8" r="3.1" fill="#1D4ED8" />
+      <path d="M8.9 7.3c2.1-.5 4.2-.3 6.2.7" fill="none" stroke="#fff" strokeWidth=".55" />
+    </svg>
+  );
+}
+
+function UnitedStatesFlag() {
+  return (
+    <svg className="flag-icon" viewBox="0 0 24 16" aria-hidden="true">
+      <rect width="24" height="16" rx="2" fill="#fff" />
+      {Array.from({ length: 7 }).map((_, index) => (
+        <rect key={index} y={index * 2.285} width="24" height="1.14" fill="#B22234" />
+      ))}
+      <rect width="10.4" height="8.6" fill="#3C3B6E" />
+      {Array.from({ length: 4 }).map((_, row) =>
+        Array.from({ length: 5 }).map((__, col) => (
+          <circle
+            key={`${row}-${col}`}
+            cx={1.2 + col * 1.8}
+            cy={1.2 + row * 1.7}
+            r=".28"
+            fill="#fff"
+          />
+        )),
+      )}
+    </svg>
+  );
+}
+
 export function Header({ lang }: HeaderProps) {
   const text = labels[lang];
   const links = [
@@ -42,15 +76,11 @@ export function Header({ lang }: HeaderProps) {
         ))}
         <div className="language-switch" aria-label="Selecionar idioma">
           <a className={lang === 'pt' ? 'is-active' : ''} href="/">
-            <span className="flag-emoji" aria-hidden="true">
-              {'\uD83C\uDDE7\uD83C\uDDF7'}
-            </span>
+            <BrazilFlag />
             PT
           </a>
-          <a className={lang === 'en' ? 'is-active' : ''} href="/en">
-            <span className="flag-emoji" aria-hidden="true">
-              {'\uD83C\uDDFA\uD83C\uDDF8'}
-            </span>
+          <a className={lang === 'en' ? 'is-active' : ''} href="/en?lang=en">
+            <UnitedStatesFlag />
             EN
           </a>
         </div>

@@ -10,7 +10,9 @@ import { Projects } from './sections/Projects';
 import { Services } from './sections/Services';
 
 export default function App() {
-  const isEnglish = window.location.pathname.startsWith('/en');
+  const params = new URLSearchParams(window.location.search);
+  const isEnglish =
+    window.location.pathname.startsWith('/en') || params.get('lang') === 'en';
   const lang = isEnglish ? 'en' : 'pt';
 
   return (
