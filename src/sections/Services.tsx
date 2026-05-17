@@ -1,23 +1,23 @@
 const services = [
   {
-    title: 'Diagnóstico FinOps',
+    title: 'Trilha AWS',
     description:
-      'Análise de custos cloud, desperdícios, governança, previsibilidade e plano de otimização para AWS.',
+      'Arquitetura, boas práticas, segurança, resiliência, desenho de soluções e preparação para conversas técnicas.',
   },
   {
-    title: 'Arquitetura AWS',
+    title: 'Trilha FinOps',
     description:
-      'Revisão de soluções, decisões arquiteturais, escalabilidade, resiliência, segurança e boas práticas.',
+      'Custos cloud, desperdícios, governança, previsibilidade e como transformar economia em argumento de negócio.',
   },
   {
-    title: 'IA aplicada',
+    title: 'Trilha IA aplicada',
     description:
-      'Mapeamento de casos de uso, automações, PoCs e aplicação prática de IA em processos reais de negócio.',
+      'Casos de uso reais, automações, GenAI, produtividade e como sair do hype para aplicação prática.',
   },
   {
-    title: 'Mentoria tech',
+    title: 'Consultoria pontual',
     description:
-      'Sessões para evolução em carreira técnica, arquitetura, cloud, FinOps, IA e tomada de decisão.',
+      'Diagnóstico para empresas e times que precisam revisar arquitetura, custos cloud ou oportunidades com IA.',
   },
 ];
 
@@ -25,8 +25,12 @@ export function Services() {
   return (
     <section className="section" id="servicos">
       <div className="section-heading">
-        <p className="section-label">Como posso ajudar</p>
-        <h2>Ofertas claras para problemas que custam dinheiro.</h2>
+        <p className="section-label">Trilhas e consultoria</p>
+        <h2>Mentoria como produto principal, consultoria como consequência natural.</h2>
+        <p>
+          Você pode começar pela mentoria individual ou trazer um problema real
+          da empresa para uma conversa de diagnóstico.
+        </p>
       </div>
       <div className="service-grid">
         {services.map((service) => (

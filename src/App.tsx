@@ -15,12 +15,12 @@ export default function App() {
       <Header />
       <main>
         <Hero />
+        <Mentorship />
         <Services />
         <About />
         <Experience />
-        <Projects />
         <Content />
-        <Mentorship />
+        <Projects />
         <Contact />
       </main>
       <Footer />
