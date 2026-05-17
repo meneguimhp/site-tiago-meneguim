@@ -40,9 +40,14 @@ export function Header({ lang }: HeaderProps) {
             {link.label}
           </a>
         ))}
-        <a className="language-link" href={lang === 'pt' ? '/en' : '/'}>
-          {lang === 'pt' ? 'EN' : 'PT'}
-        </a>
+        <div className="language-switch" aria-label="Selecionar idioma">
+          <a className={lang === 'pt' ? 'is-active' : ''} href="/">
+            <span aria-hidden="true">🇧🇷</span> PT
+          </a>
+          <a className={lang === 'en' ? 'is-active' : ''} href="/en">
+            <span aria-hidden="true">🇺🇸</span> EN
+          </a>
+        </div>
       </nav>
     </header>
   );
