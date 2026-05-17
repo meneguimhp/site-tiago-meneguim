@@ -27,3 +27,19 @@ npm run build
 - Build command: `npm run build`
 - Output directory: `dist`
 - Domínio planejado: `tiagomeneguim.com.br`
+
+## Preview social
+
+O preview usado por LinkedIn, WhatsApp e Twitter fica em:
+
+```txt
+public/preview.png
+```
+
+No Vite, esse arquivo é publicado em:
+
+```txt
+https://tiagomeneguim.com.br/preview.png
+```
+
+Use preferencialmente uma imagem de `1200x630px`.

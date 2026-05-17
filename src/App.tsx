@@ -10,20 +10,23 @@ import { Projects } from './sections/Projects';
 import { Services } from './sections/Services';
 
 export default function App() {
+  const isEnglish = window.location.pathname.startsWith('/en');
+  const lang = isEnglish ? 'en' : 'pt';
+
   return (
     <>
-      <Header />
+      <Header lang={lang} />
       <main>
-        <Hero />
-        <Mentorship />
-        <Services />
-        <About />
-        <Experience />
-        <Content />
-        <Projects />
-        <Contact />
+        <Hero lang={lang} />
+        <Mentorship lang={lang} />
+        <Services lang={lang} />
+        <About lang={lang} />
+        <Experience lang={lang} />
+        <Content lang={lang} />
+        <Projects lang={lang} />
+        <Contact lang={lang} />
       </main>
-      <Footer />
+      <Footer lang={lang} />
     </>
   );
 }

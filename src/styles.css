@@ -71,7 +71,7 @@ nav a:focus-visible {
 .section {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 88px 0;
+  padding: 56px 0;
 }
 
 .section--narrow {
@@ -132,7 +132,7 @@ p {
   gap: 54px;
   align-items: center;
   padding-top: 54px;
-  padding-bottom: 58px;
+  padding-bottom: 42px;
 }
 
 .hero__subtitle {
@@ -171,6 +171,14 @@ p {
   background: #ffffff;
   color: #10212f;
   box-shadow: none;
+}
+
+.language-link {
+  border: 1px solid #cbd5df;
+  border-radius: 8px;
+  padding: 4px 8px;
+  background: #ffffff;
+  color: #0f766e;
 }
 
 .hero__proof {
@@ -431,7 +439,7 @@ ul {
 
   .section {
     width: min(100% - 24px, 1180px);
-    padding: 58px 0;
+    padding: 42px 0;
   }
 
   h1 {
