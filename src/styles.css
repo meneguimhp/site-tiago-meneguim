@@ -202,32 +202,72 @@ p {
 
 .flag {
   display: inline-block;
-  width: 18px;
-  height: 12px;
+  position: relative;
+  width: 22px;
+  height: 15px;
   flex: 0 0 auto;
   overflow: hidden;
   border: 1px solid rgba(16, 33, 47, 0.18);
   border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.34) inset;
 }
 
 .flag-br {
-  background:
-    radial-gradient(circle at center, #1d4ed8 0 18%, transparent 19%),
-    linear-gradient(145deg, transparent 33%, #facc15 34% 50%, transparent 51%),
-    linear-gradient(35deg, transparent 33%, #facc15 34% 50%, transparent 51%),
-    #16a34a;
+  background: #229e45;
+}
+
+.flag-br::before {
+  position: absolute;
+  inset: 3px 5px;
+  background: #f8d43a;
+  content: "";
+  transform: rotate(45deg);
+}
+
+.flag-br::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #1d4ed8;
+  content: "";
+  transform: translate(-50%, -50%);
 }
 
 .flag-us {
   background:
-    linear-gradient(#1d4ed8 0 54%, transparent 55%),
     repeating-linear-gradient(
       to bottom,
-      #b91c1c 0 1.5px,
-      #ffffff 1.5px 3px
+      #b91c1c 0 1.15px,
+      #ffffff 1.15px 2.3px
     );
-  background-size: 8px 6.5px, 100% 100%;
-  background-repeat: no-repeat;
+}
+
+.flag-us::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 9px;
+  height: 8px;
+  background:
+    radial-gradient(circle, #ffffff 0 0.7px, transparent 0.8px) 1px 1px / 3px 3px,
+    #1d4ed8;
+  content: "";
+}
+
+.flag-us::after {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.16) 0 1px,
+      transparent 1px 2px
+    );
+  content: "";
+  pointer-events: none;
 }
 
 .hero__proof {
