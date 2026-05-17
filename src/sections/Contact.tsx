@@ -47,7 +47,7 @@ export function Contact({ lang }: SectionProps) {
         <Button href={links.project} target="_blank" rel="noreferrer" variant="secondary">
           {text.project}
         </Button>
-        <Button href="mailto:meneguimhp@hotmail.com" variant="secondary">
+        <Button href="mailto:tiago@tiagomeneguim.com.br" variant="secondary">
           {text.email}
         </Button>
       </div>
