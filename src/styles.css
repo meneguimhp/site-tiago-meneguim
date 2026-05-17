@@ -320,6 +320,12 @@ ul {
   margin-left: auto;
 }
 
+.contact p:not(.section-label) {
+  max-width: 680px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .contact__actions {
   justify-content: center;
 }

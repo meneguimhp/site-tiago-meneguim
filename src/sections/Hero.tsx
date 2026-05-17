@@ -1,5 +1,8 @@
 import { Button } from '../components/Button';
 
+const whatsappUrl =
+  'https://wa.me/5511997648414?text=Ola%2C%20Tiago.%20Vi%20seu%20site%20e%20quero%20conversar.';
+
 export function Hero() {
   return (
     <section className="hero section" id="inicio">
@@ -10,7 +13,9 @@ export function Hero() {
           Construindo soluções escaláveis, eficientes e orientadas a resultado.
         </p>
         <div className="hero__actions" aria-label="Ações principais">
-          <Button href="#contato">Falar comigo</Button>
+          <Button href={whatsappUrl} target="_blank" rel="noreferrer">
+            Falar comigo
+          </Button>
           <Button href="#mentoria" variant="secondary">
             Mentoria gratuita
           </Button>

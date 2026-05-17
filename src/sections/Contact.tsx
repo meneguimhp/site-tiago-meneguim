@@ -1,12 +1,26 @@
 import { Button } from '../components/Button';
 
+const whatsappUrl =
+  'https://wa.me/5511997648414?text=Ola%2C%20Tiago.%20Vi%20seu%20site%20e%20quero%20conversar.';
+
 export function Contact() {
   return (
     <section className="section contact" id="contato">
       <p className="section-label">Contato</p>
       <h2>Vamos conversar sobre tecnologia, arquitetura ou mentoria.</h2>
+      <p>
+        Prefere algo direto? Me chame pelo WhatsApp ou conecte comigo no LinkedIn.
+      </p>
       <div className="contact__actions">
-        <Button href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+        <Button href={whatsappUrl} target="_blank" rel="noreferrer">
+          WhatsApp
+        </Button>
+        <Button
+          href="https://www.linkedin.com/in/tiago-meneguim/"
+          target="_blank"
+          rel="noreferrer"
+          variant="secondary"
+        >
           LinkedIn
         </Button>
         <Button href="mailto:meneguimhp@hotmail.com" variant="secondary">
