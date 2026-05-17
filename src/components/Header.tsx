@@ -1,7 +1,9 @@
 const links = [
+  { href: '#servicos', label: 'Serviços' },
   { href: '#sobre', label: 'Sobre' },
   { href: '#experiencia', label: 'Experiência' },
   { href: '#projetos', label: 'Projetos' },
+  { href: '#conteudos', label: 'Conteúdos' },
   { href: '#mentoria', label: 'Mentoria' },
   { href: '#contato', label: 'Contato' },
 ];
