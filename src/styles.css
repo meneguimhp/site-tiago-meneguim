@@ -57,11 +57,16 @@ a {
 
 nav {
   display: flex;
+  min-width: 0;
   gap: 16px;
   align-items: center;
   color: #52616f;
   font-size: 0.95rem;
   font-weight: 700;
+}
+
+nav > a {
+  white-space: nowrap;
 }
 
 nav a:hover,
@@ -176,6 +181,7 @@ p {
 
 .language-switch {
   display: inline-flex;
+  flex: 0 0 auto;
   gap: 6px;
   align-items: center;
   border: 1px solid #d4dde5;
@@ -431,14 +437,16 @@ ul {
 
 @media (max-width: 900px) {
   .site-header {
-    align-items: flex-start;
+    align-items: center;
     gap: 16px;
   }
 
   nav {
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 10px 14px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 4px 0 8px;
+    scrollbar-width: thin;
   }
 
   .hero,
@@ -458,11 +466,24 @@ ul {
 
 @media (max-width: 620px) {
   .site-header {
-    position: static;
+    position: sticky;
+    display: grid;
+    width: 100%;
+    padding: 12px;
+    border-bottom: 1px solid #e3eaf0;
+    background: rgba(246, 248, 251, 0.96);
+  }
+
+  .brand {
+    width: 40px;
+    height: 40px;
   }
 
   nav {
-    display: none;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 4px;
+    font-size: 0.86rem;
   }
 
   .section {
