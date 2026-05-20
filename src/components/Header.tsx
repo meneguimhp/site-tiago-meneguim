@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 type HeaderProps = {
   lang: 'pt' | 'en';
 };
@@ -54,6 +56,7 @@ function UnitedStatesFlag() {
 }
 
 export function Header({ lang }: HeaderProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const text = labels[lang];
   const links = [
     { href: '#mentoria', label: text.mentorship },
@@ -64,13 +67,25 @@ export function Header({ lang }: HeaderProps) {
   ];
 
   return (
-    <header className="site-header">
+    <header className={`site-header ${isMenuOpen ? 'is-menu-open' : ''}`}>
       <a className="brand" href="#inicio" aria-label="Ir para o início">
         TM
       </a>
-      <nav aria-label="Navegação principal">
+      <button
+        className="menu-toggle"
+        type="button"
+        aria-controls="main-navigation"
+        aria-expanded={isMenuOpen}
+        aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+        onClick={() => setIsMenuOpen((current) => !current)}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+      <nav id="main-navigation" aria-label="Navegação principal">
         {links.map((link) => (
-          <a key={link.href} href={link.href}>
+          <a key={link.href} href={link.href} onClick={() => setIsMenuOpen(false)}>
             {link.label}
           </a>
         ))}
