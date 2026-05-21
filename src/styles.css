@@ -492,9 +492,9 @@ ul {
   .site-header {
     position: sticky;
     display: grid;
-    grid-template-columns: 40px 44px;
+    grid-template-columns: 40px minmax(0, 1fr) 44px;
     justify-content: space-between;
-    gap: 12px;
+    gap: 14px;
     width: 100%;
     padding: 12px;
     border-bottom: 1px solid #e3eaf0;
@@ -551,6 +551,7 @@ ul {
     grid-row: 1;
     justify-self: end;
     max-width: 100%;
+    margin-right: 4px;
     padding: 4px;
   }
 
