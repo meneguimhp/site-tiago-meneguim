@@ -71,6 +71,23 @@ export function Header({ lang }: HeaderProps) {
       <a className="brand" href="#inicio" aria-label="Ir para o início">
         TM
       </a>
+      <nav id="main-navigation" aria-label="Navegação principal">
+        {links.map((link) => (
+          <a key={link.href} href={link.href} onClick={() => setIsMenuOpen(false)}>
+            {link.label}
+          </a>
+        ))}
+      </nav>
+      <div className="language-switch" aria-label="Selecionar idioma">
+        <a className={lang === 'pt' ? 'is-active' : ''} href="/">
+          <BrazilFlag />
+          PT
+        </a>
+        <a className={lang === 'en' ? 'is-active' : ''} href="/en?lang=en">
+          <UnitedStatesFlag />
+          EN
+        </a>
+      </div>
       <button
         className="menu-toggle"
         type="button"
@@ -79,27 +96,10 @@ export function Header({ lang }: HeaderProps) {
         aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
         onClick={() => setIsMenuOpen((current) => !current)}
       >
-        <span />
-        <span />
-        <span />
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
       </button>
-      <nav id="main-navigation" aria-label="Navegação principal">
-        {links.map((link) => (
-          <a key={link.href} href={link.href} onClick={() => setIsMenuOpen(false)}>
-            {link.label}
-          </a>
-        ))}
-        <div className="language-switch" aria-label="Selecionar idioma">
-          <a className={lang === 'pt' ? 'is-active' : ''} href="/">
-            <BrazilFlag />
-            PT
-          </a>
-          <a className={lang === 'en' ? 'is-active' : ''} href="/en?lang=en">
-            <UnitedStatesFlag />
-            EN
-          </a>
-        </div>
-      </nav>
     </header>
   );
 }

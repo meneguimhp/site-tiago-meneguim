@@ -502,17 +502,22 @@ ul {
   }
 
   .brand {
+    grid-column: 1;
+    grid-row: 1;
     width: 40px;
     height: 40px;
   }
 
   .menu-toggle {
+    grid-column: 3;
+    grid-row: 1;
     display: flex;
   }
 
   nav {
     display: none;
     grid-column: 1 / -1;
+    grid-row: 2;
     width: 100%;
     margin: 0;
     overflow: visible;
@@ -542,16 +547,16 @@ ul {
   }
 
   .language-switch {
-    width: 100%;
-    justify-content: space-between;
-    margin-top: 4px;
-    padding: 6px;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    max-width: 100%;
+    padding: 4px;
   }
 
   .language-switch a {
-    flex: 1;
     justify-content: center;
-    padding: 10px;
+    padding: 8px;
   }
 
   .section {
