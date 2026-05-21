@@ -1,4 +1,5 @@
 import { Button } from '../components/Button';
+import { LinkedInIcon, MailIcon, WhatsAppIcon } from '../components/Icons';
 
 type SectionProps = {
   lang: 'pt' | 'en';
@@ -9,6 +10,7 @@ const links = {
     'https://wa.me/5511997648414?text=Ola%2C%20Tiago.%20Quero%20conversar%20sobre%20mentoria%20em%20AWS%2C%20FinOps%20e%20IA.',
   project:
     'https://wa.me/5511997648414?text=Ola%2C%20Tiago.%20Tenho%20um%20projeto%20ou%20demanda%20pontual%20em%20AWS%2C%20FinOps%2C%20IA%20ou%20arquitetura.',
+  linkedin: 'https://www.linkedin.com/in/tiago-meneguim/',
 };
 
 const copy = {
@@ -19,6 +21,7 @@ const copy = {
       'Me chame no WhatsApp e conte se você busca evolução profissional ou apoio em um projeto pontual de AWS, FinOps, IA, automação ou arquitetura.',
     mentorship: 'Quero mentoria',
     project: 'Tenho um projeto',
+    linkedin: 'LinkedIn',
     email: 'Email',
   },
   en: {
@@ -28,6 +31,7 @@ const copy = {
       'Message me on WhatsApp and tell me whether you are looking for professional growth or support on a project involving AWS, FinOps, AI, automation or architecture.',
     mentorship: 'I want mentorship',
     project: 'I have a project',
+    linkedin: 'LinkedIn',
     email: 'Email',
   },
 };
@@ -42,12 +46,19 @@ export function Contact({ lang }: SectionProps) {
       <p>{text.intro}</p>
       <div className="contact__actions">
         <Button href={links.mentorship} target="_blank" rel="noreferrer">
+          <WhatsAppIcon />
           {text.mentorship}
         </Button>
         <Button href={links.project} target="_blank" rel="noreferrer" variant="secondary">
+          <WhatsAppIcon />
           {text.project}
         </Button>
+        <Button href={links.linkedin} target="_blank" rel="noreferrer" variant="secondary">
+          <LinkedInIcon />
+          {text.linkedin}
+        </Button>
         <Button href="mailto:tiago@tiagomeneguim.com.br" variant="secondary">
+          <MailIcon />
           {text.email}
         </Button>
       </div>

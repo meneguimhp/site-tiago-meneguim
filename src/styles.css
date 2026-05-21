@@ -184,6 +184,7 @@ p {
   min-height: 50px;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   border: 1px solid transparent;
   border-radius: 8px;
   padding: 0 22px;
@@ -201,6 +202,12 @@ p {
   background: #ffffff;
   color: #10212f;
   box-shadow: none;
+}
+
+.button__icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
 }
 
 .language-switch {

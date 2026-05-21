@@ -1,4 +1,5 @@
 import { Button } from '../components/Button';
+import { WhatsAppIcon } from '../components/Icons';
 
 type SectionProps = {
   lang: 'pt' | 'en';
@@ -94,6 +95,7 @@ export function Mentorship({ lang }: SectionProps) {
             ))}
           </div>
           <Button href={whatsappUrl} target="_blank" rel="noreferrer">
+            <WhatsAppIcon />
             {text.cta}
           </Button>
         </aside>

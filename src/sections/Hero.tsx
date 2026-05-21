@@ -1,4 +1,5 @@
 import { Button } from '../components/Button';
+import { WhatsAppIcon } from '../components/Icons';
 
 type SectionProps = {
   lang: 'pt' | 'en';
@@ -61,9 +62,11 @@ export function Hero({ lang }: SectionProps) {
         <p className="hero__subtitle">{text.subtitle}</p>
         <div className="hero__actions" aria-label="Ações principais">
           <Button href={links.mentorship} target="_blank" rel="noreferrer">
+            <WhatsAppIcon />
             {text.primary}
           </Button>
           <Button href={links.project} target="_blank" rel="noreferrer" variant="secondary">
+            <WhatsAppIcon />
             {text.secondary}
           </Button>
         </div>
